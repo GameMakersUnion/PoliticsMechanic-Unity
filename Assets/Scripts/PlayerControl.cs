@@ -47,8 +47,23 @@ public class PlayerControl : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		//accepts overriding input of both keyboard and joysticks for same player. laziest implementation possible.
+		//also note most keyboards cannot handle >2 players due to their limited key cache size
+
+		x = Input.GetAxis(playerNum.ToString() + "kx");
+		y = Input.GetAxis(playerNum.ToString() + "ky");
+		Motion();
+
+
 		x = Input.GetAxis(playerNum.ToString() + "x");
 		y = Input.GetAxis(playerNum.ToString() + "y");
+		Motion();
+
+
+	}
+
+	void Motion(){
 
 		//movement
 		if (  x!=0 || y!=0 ){
@@ -58,11 +73,6 @@ public class PlayerControl : MonoBehaviour {
 		//rotation
 		if (x!=0 && y !=0) angleNext = Mathf.Atan2(y,-x) * Mathf.Rad2Deg;
 		transform.eulerAngles = new Vector3(transform.eulerAngles.x ,transform.eulerAngles.y, angleNext);
-
-
-		if ( Input.GetKeyDown( mapKeyCodes[playerNum]  ) ){
-			//Debug.Log ( "WOO" + playerNum );
-		}
 
 	}
 }
