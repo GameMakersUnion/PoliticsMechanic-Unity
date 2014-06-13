@@ -13,7 +13,7 @@ public class ConeLogic : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 
-		int player = int.Parse ( transform.parent.GetComponent<PlayerControl>().playerNum.ToString().Substring(6) ) - 1;
+		int player = int.Parse ( transform.parent.GetComponent<PlayerControl>().player.ToString().Substring(6) ) - 1;
 		//Debug.Log ( "player1".Substring(6) );   //this is like the above line, but much simpler
 
 
@@ -22,7 +22,7 @@ public class ConeLogic : MonoBehaviour {
 
 		if(other.tag == "Sheeple") {
 			GameLogic.score [ player ]++;
-			other.renderer.material.color = mapColor[ transform.parent.GetComponent<PlayerControl>().playerNum ];
+			other.renderer.material.color = mapColor[ transform.parent.GetComponent<PlayerControl>().player ];
 			//other.SendMessage(
 		}
 	}

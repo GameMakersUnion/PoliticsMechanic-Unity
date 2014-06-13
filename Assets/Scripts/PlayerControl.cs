@@ -20,7 +20,7 @@ public enum Parties{
 
 public class PlayerControl : MonoBehaviour {
 
-	public Players playerNum;
+	public Players player;
 	
 	private float distance = 3f;
 	private float y;
@@ -51,13 +51,13 @@ public class PlayerControl : MonoBehaviour {
 		//accepts overriding input of both keyboard and joysticks for same player. laziest implementation possible.
 		//also note most keyboards cannot handle >2 players due to their limited key cache size
 
-		x = Input.GetAxis(playerNum.ToString() + "kx");
-		y = Input.GetAxis(playerNum.ToString() + "ky");
+		x = Input.GetAxis(player.ToString() + "kx");
+		y = Input.GetAxis(player.ToString() + "ky");
 		Motion();
 
 
-		x = Input.GetAxis(playerNum.ToString() + "x");
-		y = Input.GetAxis(playerNum.ToString() + "y");
+		x = Input.GetAxis(player.ToString() + "x");
+		y = Input.GetAxis(player.ToString() + "y");
 		Motion();
 
 
