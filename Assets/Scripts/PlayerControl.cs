@@ -30,14 +30,46 @@ public class PlayerControl : MonoBehaviour {
 	float angleNext = 0f;
 	float rotationDegRelative = 0f;
 
-	private Dictionary<Players,KeyCode> mapKeyCodes = new Dictionary<Players,KeyCode>()
+	public static Dictionary<Players, Color> mapColor = new Dictionary<Players, Color>(){
+		{Players.player1, Color.green},
+		{Players.player2, Color.red},
+		{Players.player3, Color.yellow},
+		{Players.player4, Color.blue}
+	};
+	
+	public static Dictionary<Players, Parties> mapParties = new Dictionary<Players, Parties>(){
+		{Players.player1, Parties.GreenParty},
+		{Players.player2, Parties.Liberals},
+		{Players.player3, Parties.NDP},
+		{Players.player4, Parties.PCs},
+	};
+
+	private Dictionary<Players,KeyCode> mapJoystickKeyCodes = new Dictionary<Players,KeyCode>()
 	{
 		{Players.player1, KeyCode.Joystick1Button0},
 		{Players.player2, KeyCode.Joystick2Button0},
 		{Players.player3, KeyCode.Joystick3Button0},
 		{Players.player4, KeyCode.Joystick4Button0}
 	};
-	
+
+
+	/*
+	//UNUSED REFERENCE DATA STRUCTURE
+	private class Directions{
+		KeyCode Up;
+		KeyCode Down;
+		KeyCode Left;
+		KeyCode Right;
+	}
+
+	private Dictionary<Players, KeyCode> mapKeyboard = new Dictionary<Players, Directions>(){
+		{Players.player1, new Directions(KeyCode.W, KeyCode.S, KeyCode.A, KeyCode.D) },
+		{Players.player2, new Directions(KeyCode.UpArrow, KeyCode.DownArrow, KeyCode.LeftArrow, KeyCode.RightArrow) },
+		{Players.player3, new Directions(KeyCode.O, KeyCode.L, KeyCode.K, KeyCode.Colon) },
+		{Players.player4, new Directions(KeyCode.Keypad8, KeyCode.Keypad2, KeyCode.Keypad4, KeyCode.Keypad6) }
+	};
+	*/
+
 	
 	// Use this for initialization
 	void Start () {
