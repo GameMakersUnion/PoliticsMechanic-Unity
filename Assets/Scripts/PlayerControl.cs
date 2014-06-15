@@ -22,7 +22,7 @@ public class PlayerControl : MonoBehaviour {
 
 	public Players player;
 	
-	private float distance = 10f;
+	private float distance = 3f;
 	private float y;
 	private float x;
 	
