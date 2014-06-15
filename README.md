@@ -4,14 +4,18 @@ PoliticsMechanic-Unity
 ![readme image][1]
 
 ####Gameplay
-Four player. Sway the undecided public to your party by exuding articulate speeches at them.
+Four player. Sway the undecided public to your party by exuding articulate speeches at them, within the boundaries of Ontario.
 
 ####Setup
 Requires controllers, which Unity automatically detects once installed correctly in Windows.
 
 ####Credits
-Ian code, Jordan code, Matthew code
+Ian code & photoshop, Jordan code, Matthew code
 
-  [1]: https://raw.githubusercontent.com/GameMakersUnion/PoliticsMechanic-Unity/master/README.png
+####Creation
+Separated image into 2 parts in Photoshop, water and province. Applied a component in Unity of Polygon Collider 2D to the water.
+
+  [1]: https://raw.githubusercontent.com/GameMakersUnion/PoliticsMechanic-Unity/master/README1.png
+  [2]: https://raw.githubusercontent.com/GameMakersUnion/PoliticsMechanic-Unity/master/README2.png
 
 
