@@ -9,7 +9,7 @@ PoliticsMechanic-Unity
 Four player. Sway the undecided public to your party by exuding articulate speeches at them, within the boundaries of Ontario.
 
 ####Setup
-Requires controllers, which Unity automatically detects once installed correctly in Windows.
+Requires keyboard or controllers. Keyboard input works now four players ASDW KL:O 4628 ←↑→↓, however due to ghosting only 2 will fully work. Will also works with four controllers, which Unity automatically detects once installed correctly in Windows.
 
 ####Credits
 Ian code & photoshop, Jordan code, Matthew code
