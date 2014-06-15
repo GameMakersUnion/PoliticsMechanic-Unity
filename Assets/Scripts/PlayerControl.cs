@@ -22,7 +22,7 @@ public class PlayerControl : MonoBehaviour {
 
 	public Players player;
 	
-	private float distance = 3f;
+	private float distance = 10f;
 	private float y;
 	private float x;
 	
@@ -31,10 +31,10 @@ public class PlayerControl : MonoBehaviour {
 	float rotationDegRelative = 0f;
 
 	public static Dictionary<Players, Color> mapColor = new Dictionary<Players, Color>(){
-		{Players.player1, Color.green},
-		{Players.player2, Color.red},
-		{Players.player3, Color.yellow},
-		{Players.player4, Color.blue}
+		{Players.player1, Color.green},	//ad
+		{Players.player2, Color.red},	//left right
+		{Players.player3, Color.yellow},	//k;
+		{Players.player4, Color.blue}		//46
 	};
 	
 	public static Dictionary<Players, Parties> mapParties = new Dictionary<Players, Parties>(){
